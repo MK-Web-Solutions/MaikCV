@@ -1,0 +1,155 @@
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { type Project, projectsData } from "../data/projectsData";
+
+const ProjectCard = ({ project, onOpen }: { project: Project; onOpen: () => void }) => {
+  //const thumbnail = project.images?.[0]?.src || "/placeholder.png";
+  return (
+    <div
+      style={{ color: "white" }}
+      className="min-w-[220px] w-[220px] h-[300px] rounded-[20px] overflow-hidden p-4 flex flex-col justify-between cursor-pointer transition duration-200 hover:bg-[#3C3D37] hover:-translate-y-1"
+      onClick={onOpen}
+    >
+      <div className="w-full h-[180px] overflow-hidden rounded-[15px]">
+        {/* <img src={thumbnail} alt={project.title} className="w-full h-full object-cover" /> */}
+      </div>
+      <div className="mt-4 flex flex-col items-center text-center">
+        <h3 className="font-bold text-base leading-tight line-clamp-2">{project.title}</h3>
+      </div>
+    </div>
+  );
+};
+
+const SelectedWorks = () => {
+  const [openCard, setOpenCard] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState("AI & ML");
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  const tabs = ["AI & ML", "Data Science", "Web Dev"];
+  const currentProject = projectsData.find((p: Project) => p.title === openCard);
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpenCard(null);
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        setOpenCard(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [modalRef]);
+
+  const displayedProjects = projectsData.filter((p) => p.type === activeTab);
+
+  // Group projects by subType
+  const groupedProjects: Record<string, Project[]> = {};
+  displayedProjects.forEach((p) => {
+    const key = p.subType || "Other";
+    if (!groupedProjects[key]) groupedProjects[key] = [];
+    groupedProjects[key].push(p);
+  });
+
+  return (
+    <div className="bg-[#1D2124] flex flex-col gap-12 py-16" style={{ color: "white" }}>
+      <h1 className="text-center font-extrabold text-4xl mb-8">Projects</h1>
+{/* Tabs */}
+<div className="flex justify-center gap-6 mb-8">
+  {tabs.map((tab) => (
+    <button
+      key={tab}
+      onClick={() => setActiveTab(tab)}
+      className={`px-4 py-2 rounded-full font-semibold transition-all duration-200
+        ${activeTab === tab ? "bg-[#3C3D37]" : "bg-[#2C2F33] hover:bg-[#3E4039] hover:scale-105"}`}
+      style={{ color: "white" }}
+    >
+      {tab}
+    </button>
+  ))}
+</div>
+
+      {/* Projects grouped by subType */}
+      {Object.keys(groupedProjects).map((subType) => (
+        <div key={subType}>
+          <h2 className="text-2xl font-bold mb-4">{subType}</h2>
+          <div className="overflow-x-auto w-full scroll-smooth px-4">
+            <div className="flex gap-[54px] snap-x snap-mandatory">
+              {groupedProjects[subType].map((project, index) => (
+                <div
+                  key={project.id}
+                  className={`flex-shrink-0 snap-center ${
+                    index === 0 ? "ml-auto" : ""
+                  } ${index === groupedProjects[subType].length - 1 ? "mr-auto" : ""}`}
+                >
+                  <ProjectCard project={project} onOpen={() => setOpenCard(project.title)} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+
+      {/* Fullscreen modal */}
+      <AnimatePresence>
+        {currentProject && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            style={{ color: "white" }}
+          >
+            <motion.div
+              ref={modalRef}
+              className="bg-[#2C2F33] rounded-[20px] overflow-hidden shadow-2xl flex flex-col"
+              style={{
+                position: "fixed",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "clamp(300px, 60vw, 900px)",
+                maxHeight: "90vh",
+                color: "white",
+              }}
+            >
+              {/*
+              {currentProject.images && currentProject.images.length > 0 && (
+                <div className="w-full overflow-hidden relative">
+                  <img
+                    src={currentProject.images[0].src}
+                    alt={currentProject.images[0].caption}
+                    className="w-full h-[400px] object-cover"
+                  />
+                  <p className="text-sm mt-1 text-center">{currentProject.images[0].caption}</p>
+                </div>
+              )} */}
+              <div className="p-6 flex-1 overflow-auto">
+                <h2 className="text-3xl font-bold mb-2">{currentProject.title}</h2>
+                <p className="mb-2">{currentProject.summary}</p>
+                {currentProject.details && <p>{currentProject.details}</p>}
+                {currentProject.githubLink && (
+                  <a
+                    href={currentProject.githubLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:underline mt-4 block"
+                  >
+                    View Project on GitHub
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+export default SelectedWorks;
