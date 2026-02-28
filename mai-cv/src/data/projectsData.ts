@@ -1,7 +1,7 @@
 export interface Project {
   id: number;
   title: string;
-  type: "AI & ML" | "Data Science" | "Web Dev";
+  type: "AI & ML" | "Data Science" | "Software" | "Embedded Systems";
   subType?: string;
   summary: string;
   details?: string;
@@ -18,11 +18,6 @@ export const projectsData: Project[] = [
     title: "Premier League Match Outcome Predictor",
     summary: "Forecasted match outcomes using DNN, SVM, and Random Forest models.",
     githubLink: "https://github.com/maik122/Predicting-Premier-League-Match-Outcomes.git",
-    //images: [
-    //  { src: "/images/ModelsComparison.png", caption: "Comparison of model performance metrics" },
-    //  { src: "/images/SvmPolynmialKernelVisualisation.png", caption: "Visualising SVM Polynomial Kernel predictions" },
-    //  { src: "/images/premierleagueprediction.png", caption: "Premier League prediction result example" }
-    //],
     details: "Built and trained DNN, SVM, and Random Forest models with Python, scikit-learn, TensorFlow, and pandas."
   },
   {
@@ -50,10 +45,6 @@ export const projectsData: Project[] = [
     title: "Job Keyword Matcher",
     summary: "NLP tool analysing CVs vs job postings to identify skill gaps and rank fit.",
     githubLink: "https://github.com/maik122/Job-Keyword-Matcher.git",
-    //images: [
-    //  { src: "/images/CVMatcher.png", caption: "AI-powered CV keyword analysis" },
-    //  { src: "/images/CVMetrics.png", caption: "Result comparison for CV matching" }
-    //],
     details: "Streamlit app using spaCy and TF-IDF vectorisation for CV-job description analysis."
   },
 
@@ -76,48 +67,65 @@ export const projectsData: Project[] = [
     githubLink: "https://github.com/maik122/Elevvo/tree/main/CustomerSegmentation",
     details: "Applied clustering and visualised customer segments with matplotlib/seaborn."
   },
-  // … repeat same for all other projects …
 
-  // Web Dev
+  // Software
   {
     id: 15,
-    type: "Web Dev",
-    subType: "Software & Web Development",
+    type: "Software",
+    subType: "Web Development",
     title: "Football Player Transfer Value Website",
     summary: "Flask + SQLite app with dashboards and charts for player valuation.",
     githubLink: "https://github.com/maik122/football-player-transfer-value",
-    //images: [
-    //  { src: "/images/TransferValueComparison.png", caption: "Player value comparison page" },
-    //  { src: "/images/TransferValueAdmin.png", caption: "Admin management interface" }
-    //],
     details: "User auth, prediction dashboards, admin interface."
   },
   {
     id: 16,
-    type: "Web Dev",
-    subType: "Software & Web Development",
+    type: "Software",
+    subType: "Software Development",
     title: "UK Railway System",
     summary: "Tkinter-based booking system with user/admin interfaces.",
     githubLink: "https://github.com/maik122/UK-railway-system",
-    //images: [
-    //  { src: "/images/systemHomePage.png", caption: "System homepage" },
-    //  { src: "/images/systemAdminInterface.png", caption: "Admin interface" },
-    //  { src: "/images/systemConfirmation.png", caption: "Booking confirmation view" }
-    //],
     details: "Streamlined train booking system with schedule management."
   },
   {
     id: 17,
-    type: "Web Dev",
-    subType: "Software & Web Development",
-    title: "Hotel Booking Platform",
+    type: "Software",
+    subType: "Web Development",
+    title: "Hotel Booking Website",
     summary: "Full-stack web app for reservations, admin management, and CRUD operations.",
     githubLink: "https://github.com/maik122/Hotel-booking-website",
-    //images: [
-    //  { src: "/images/HotelHomepage.png", caption: "Hotel homepage" },
-    //  { src: "/images/HotelBooking.png", caption: "Booking interface" },
-    //  { src: "/images/HotelAdminInterface.png", caption: "Admin management page" }
-    //],
     details: "Flask + SQLAlchemy platform with user auth, booking management, admin dashboards."
+  },
+  {
+    id: 18,
+    type: "Software",
+    subType: "Web Development",
+    title: "Personal Portfolio Website",
+    summary: "React-based portfolio showcasing projects, skills, and contact info.",
+    githubLink: "https://github.com/maik122/Personal-Portfolio-Website"
+  },
+  {
+    id: 19,
+    type: "Software",
+    subType: "Web Development",
+    title: "Artist Showreel Website",
+    summary: "Full-stack React + Node.js site for artist to showcase work and connect with clients."
+  },
+  {
+    id: 20,
+    type: "Software",
+    subType: "Software Development",
+    title: "MIDI Composition Tool",
+    summary: "Fast, key-consistent chord generation tool for Logic Pro using Scripter plugin."
+  },
+
+  // Embedded Systems
+  {
+    id: 30,
+    type: "Embedded Systems",
+    subType: "Music Tech / Hardware",
+    title: "Custom MIDI Controller",
+    summary: "Designed and built a custom MIDI controller for composition and performance.",
+    details: "Standalone hardware with microcontroller and custom inputs for live and studio use."
   }
 ];

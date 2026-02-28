@@ -10,17 +10,6 @@ import elevvoLogo from '/images/elevvopaths_logo.jpeg';
 
 const timelineData = [
   {
-    date: "Jun 2024 - Present",
-    title: "Full-Stack Web Developer — MK Web-Solutions",
-    logo: mkWebLogo,
-    details: [
-      "Freelance",
-      "Developed dynamic websites and web apps using HTML, CSS, JS, Python (Flask/Django)",
-      "Built end-to-end solutions including frontend, backend, and database integration",
-      "Delivered client-specific projects with responsive design and performance optimisation"
-    ]
-  },
-  {
     date: "Dec 2025 - Present",
     title: "AI Model Evaluation Engineer — Omnichunk",
     logo: omnichunkLogo,
@@ -31,6 +20,18 @@ const timelineData = [
       "Analysed outputs and produced reports for model selection"
     ]
   },
+  {
+    date: "Jun 2024 - Present",
+    title: "Full-Stack Web Developer — MK Web-Solutions",
+    logo: mkWebLogo,
+    details: [
+      "Freelance",
+      "Developed dynamic websites and web apps using HTML, CSS, JS, Python (Flask/Django)",
+      "Built end-to-end solutions including frontend, backend, and database integration",
+      "Delivered client-specific projects with responsive design and performance optimisation"
+    ]
+  },
+
   {
     date: "Oct 2025 - Nov 2025",
     title: "Data Scientist — EduLumos",
@@ -105,59 +106,44 @@ const HomePage: React.FC = () => {
           </p>
 
           {/* Experience Section */}
-          <section id="experience" className="relative w-full py-20 bg-gray-50 flex flex-col items-center">
-            <div className="relative w-full max-w-[1000px]">
-              {/* Timeline vertical line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-400 top-0 bottom-0 z-0"></div>
+<section id="experience" className="w-full py-20 bg-gray-50 flex flex-col items-center">
+  <div className="timeline relative w-full max-w-[1000px]">
 
-              {/* Timeline items */}
-              {timelineData.map((item, idx) => {
-                const isOdd = idx % 2 === 0;
-                const isOpen = openCard === idx;
+    {/* Vertical Line */}
+    <div className="absolute left-1/2 top-0 h-full w-1 bg-[#697565] transform -translate-x-1/2 z-0"></div>
 
-                return (
-                  <div key={idx} className={`timeline-item relative w-1/2 px-6 mb-8 ${isOdd ? 'left-0 text-right' : 'left-1/2 text-left'}`}>
-                    {/* Timeline node */}
-                    <div className={`absolute top-5 w-5 h-5 bg-gray-500 border-2 border-gray-800 rounded-full ${isOdd ? 'right-0' : 'left-0'}`}></div>
+    {timelineData.map((item, idx) => {
+      const isOdd = idx % 2 === 0;
 
-                    {/* Card */}
-                    <div
-                      className="bg-white p-6 rounded-lg shadow-md max-w-[400px] cursor-pointer transition-all duration-300 hover:shadow-xl flex flex-col items-start"
-                      onClick={() => setOpenCard(isOpen ? null : idx)}
-                    >
-                  <img
+      return (
+        <div
+          key={idx}
+          className={`timeline-item relative w-1/2 px-6 mb-12 ${isOdd ? 'left-0 text-right' : 'left-1/2 text-left'}`}
+        >
+ 
+
+          {/* Card */}
+          <div className="timeline-content bg-white p-6 rounded-lg shadow-md max-w-[400px] inline-block relative z-20 hover:translate-y-[-3px] transition-transform">
+            <div className="timeline-date font-bold text-[#3C3D37] mb-2">{item.date}</div>
+                <img
                     src={item.logo}
                     alt={`${item.title} logo`}
                     className="w-20 h-20 object-contain mb-2 flex-shrink-0"
                     style={{ width: "48px", height: "48px" }}
-                  />
-                      <div className="timeline-date font-bold text-gray-700 mb-2">{item.date}</div>
-                      <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                      <p className="text-gray-500 text-sm italic">{isOpen ? 'Click to collapse' : 'Click to expand'}</p>
+                  />     
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              {item.details.map((d, i) => <li key={i}>{d}</li>)}
+            </ul>
+          </div>
+        </div>
+      )
+    })}
 
-                      {/* Expanded content */}
-                      <AnimatePresence>
-                        {isOpen && (
-                          <motion.div
-                            className="mt-4 w-full"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <ul className="list-disc list-inside text-gray-700 mt-2">
-                              {item.details.map((d, i) => <li key={i}>{d}</li>)}
-                            </ul>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+  </div>
+</section>
         </section>
+
 
         <SelectedWorks />
       </div>

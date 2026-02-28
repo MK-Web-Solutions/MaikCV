@@ -25,7 +25,7 @@ const SelectedWorks = () => {
   const [activeTab, setActiveTab] = useState("AI & ML");
   const modalRef = useRef<HTMLDivElement>(null);
 
-  const tabs = ["AI & ML", "Data Science", "Web Dev"];
+  const tabs = ["AI & ML", "Data Science", "Software", "Embedded Systems"];
   const currentProject = projectsData.find((p: Project) => p.title === openCard);
 
   useEffect(() => {
@@ -60,25 +60,25 @@ const SelectedWorks = () => {
     <div className="bg-[#1D2124] flex flex-col gap-12 py-16" style={{ color: "white" }}>
       <h1 className="text-center font-extrabold text-4xl mb-8">Projects</h1>
 {/* Tabs */}
-<div className="flex justify-center gap-6 mb-8">
+<div className="flex justify-center gap-4 mb-12">
   {tabs.map((tab) => (
     <button
       key={tab}
       onClick={() => setActiveTab(tab)}
-      className={`px-4 py-2 rounded-full font-semibold transition-all duration-200
-        ${activeTab === tab ? "bg-[#3C3D37]" : "bg-[#2C2F33] hover:bg-[#3E4039] hover:scale-105"}`}
-      style={{ color: "white" }}
+      className={`px-6 py-2 rounded-full transition-colors duration-200 font-medium
+        ${activeTab === tab
+          ? "bg-white text-black"       // Active tab is highlighted clearly
+          : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white"} // Inactive tabs subtle
+      `}
     >
       {tab}
     </button>
   ))}
 </div>
-
       {/* Projects grouped by subType */}
       {Object.keys(groupedProjects).map((subType) => (
         <div key={subType}>
-          <h2 className="text-2xl font-bold mb-4">{subType}</h2>
-          <div className="overflow-x-auto w-full scroll-smooth px-4">
+<h2 className="text-2xl font-bold mb-4 text-center">{subType}</h2>          <div className="overflow-x-auto w-full scroll-smooth px-4">
             <div className="flex gap-[54px] snap-x snap-mandatory">
               {groupedProjects[subType].map((project, index) => (
                 <div
