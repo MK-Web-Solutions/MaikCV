@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from "react";
 import SelectedWorks from './SelectedWorks';
 import PageWrapper from '../components/PageWrapper';
 
