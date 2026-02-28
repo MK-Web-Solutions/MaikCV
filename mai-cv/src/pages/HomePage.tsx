@@ -54,28 +54,7 @@ const timelineData = [
 ];
 
 const HomePage: React.FC = () => {
-  const [openCard, setOpenCard] = useState<number | null>(null);
-  const modalRef = useRef<HTMLDivElement>(null);
 
-  // Close expanded card on outside click
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-        setOpenCard(null);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  // Close on Escape key
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpenCard(null);
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, []);
 
   return (
     <PageWrapper>
@@ -119,7 +98,7 @@ const HomePage: React.FC = () => {
           key={idx}
           className={`timeline-item relative w-1/2 px-6 mb-12 ${isOdd ? 'left-0 text-right' : 'left-1/2 text-left'}`}
         >
- 
+
 
           {/* Card */}
           <div className="timeline-content bg-white p-6 rounded-lg shadow-md max-w-[400px] inline-block relative z-20 hover:translate-y-[-3px] transition-transform">
