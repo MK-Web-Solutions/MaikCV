@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faPython, faTelegramPlane, faHtml5, faCss3, faJs, faGithub
+  faPython, faTelegramPlane, faHtml5, faCss3, faJs
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faBrain, faNetworkWired, faRobot, faLayerGroup, faCommentDots,
@@ -48,41 +47,8 @@ const skillsData = {
 };
 
 const Footer = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("");
-  const [showStatus, setShowStatus] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      setStatus("Please fill in all fields.");
-      setShowStatus(true);
-      return;
-    }
-    try {
-      const response = await fetch("https://formspree.io/f/xgolqpvg", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      setStatus(response.ok ? "Thanks! Your message has been sent." : "Oops! Something went wrong.");
-      if (response.ok) setFormData({ name: "", email: "", message: "" });
-      setShowStatus(true);
-    } catch {
-      setStatus("Error sending message. Please try again later.");
-      setShowStatus(true);
-    }
-  };
-
-  useEffect(() => {
-    if (!showStatus) return;
-    const timer = setTimeout(() => setShowStatus(false), 4000);
-    return () => clearTimeout(timer);
-  }, [showStatus]);
 
   const renderCategory = (title: string, skills: { icon: any; name: string }[]) => (
     <>
