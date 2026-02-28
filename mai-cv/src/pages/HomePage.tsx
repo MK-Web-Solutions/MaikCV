@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import SelectedWorks from './SelectedWorks';
 import PageWrapper from '../components/PageWrapper';
 
