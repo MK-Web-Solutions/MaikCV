@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
 <img
   src="/wave.gif"
   alt="Waving animation"
-  className="w-[90%] max-w-[800px] h-auto object-contain animate-float mt-[30px]"
+  className="w-[90%] max-w-[800px] h-auto object-contain animate-float mt-[50px]"
 />
   </div>
 
