@@ -63,11 +63,11 @@ const HomePage: React.FC = () => {
 
   {/* GIF Side */}
   <div className="w-full lg:w-3/5 flex items-center justify-center">
-    <img
-      src="/wave.gif"
-      alt="Waving animation"
-      className="w-[90%] max-w-[800px] h-auto object-contain animate-float"
-    />
+<img
+  src="/wave.gif"
+  alt="Waving animation"
+  className="w-[90%] max-w-[800px] h-auto object-contain animate-float mt-[30px]"
+/>
   </div>
 
   {/* Text Side */}

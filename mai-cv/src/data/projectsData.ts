@@ -21,10 +21,10 @@ export const projectsData: Project[] = [
     title: "Premier League Match Outcome Predictor",
 
     problem:
-      "Football match outcomes are difficult to predict due to many interacting variables such as team form, historical performance, and match statistics.",
+      "Predicting match outcomes requires modelling complex, interacting performance variables across teams and seasons.",
 
     solution:
-      "Designed and evaluated multiple machine learning models (DNN, SVM, Random Forest) to predict match outcomes using historical Premier League data. Compared model performance using classification metrics to determine the most accurate approach.",
+      "Developed and benchmarked multiple classification models including SVM, Random Forest, and deep neural networks. Engineered performance features from historical data and evaluated models using precision, recall, and cross-validation to identify the most robust predictive approach.",
 
     stack: ["Python,", "Pandas,", "Scikit-learn,", "TensorFlow,", "Matplotlib"],
 
@@ -39,10 +39,10 @@ export const projectsData: Project[] = [
     title: "Engine Anomaly Detection & RUL Prediction",
 
     problem:
-      "Unexpected aircraft engine failures are costly and dangerous. Predicting Remaining Useful Life (RUL) enables preventative maintenance.",
+      "Reactive maintenance increases operational cost and failure risk in industrial systems.",
 
     solution:
-      "Built a GRU-based recurrent neural network using the NASA turbofan dataset to model time-series degradation patterns. Predicted RUL and identified early-stage anomalies before failure thresholds.",
+      "Designed a GRU-based recurrent neural network to model degradation patterns in  engine time-series data. Implemented sequence modelling and early anomaly detection to estimate remaining useful life prior to failure thresholds.",
 
     stack: ["Python,", "TensorFlow,", "GRU,", "Pandas,", "NumPy"],
 
@@ -57,15 +57,15 @@ export const projectsData: Project[] = [
     title: "Traffic Violation Detection (In Progress)",
 
     problem:
-      "Manual monitoring of traffic violations through CCTV footage is inefficient and prone to human error.",
+      "Manual CCTV monitoring is inconsistent and does not scale.",
 
     solution:
-      "Developing a YOLOv8-based computer vision system capable of real-time object detection and classification to identify traffic violations from CCTV streams.",
+      "Building a real-time object detection pipeline using YOLOv8 and OpenCV. The system identifies vehicles and rule violations directly from video streams, optimised for inference speed and detection accuracy.",
 
     stack: ["Python,", "YOLOv8,", "OpenCV,", "PyTorch,"],
 
     githubLink:
-      "https://github.com/maik122/Traffic-Violation-Detection.git"
+      "https://github.com/maik122/"
   },
 
   {
@@ -75,17 +75,64 @@ export const projectsData: Project[] = [
     title: "Job Keyword Matcher",
 
     problem:
-      "Job applicants often struggle to identify missing skills or alignment gaps between their CV and job descriptions.",
+      "Applicants struggle to quantify CV alignment with job specifications.",
 
     solution:
-      "Built an NLP-based Streamlit application that compares CVs against job postings using TF-IDF vectorisation and semantic analysis to rank relevance and highlight skill gaps.",
+      "Developed an NLP pipeline using TF-IDF and semantic similarity scoring to rank CV-job relevance. Deployed via Streamlit for interactive comparison and automated skill-gap highlighting.",
 
     stack: ["Python,", "spaCy,", "Scikit-learn,", "TF-IDF,", "Streamlit"],
 
     githubLink:
-      "https://github.com/maik122/Job-Keyword-Matcher.git"
+      "https://github.com/maik122/"
   },
+  {
+  id: 34,
+  type: "AI & ML",
+  subType: "Recommendation Systems",
+  title: "Movie Recommendation System",
 
+  problem:
+    "Users face content overload without personalised filtering.",
+
+  solution:
+    "Implemented collaborative filtering with similarity scoring and matrix factorisation. Generated ranked recommendations using user-item interaction matrices and cosine similarity optimisation.",
+
+  stack: ["Python,", "Pandas,", "NumPy,", "Scikit-learn,", "Matplotlib"],
+  githubLink:
+    "https://github.com/maik122/Elevvo.git"
+},
+{
+  id: 35,
+  type: "AI & ML",
+  subType: "Computer Vision & Deep Learning",
+  title: "Music Genre Classification",
+
+  problem:
+    "Audio signals contain complex frequency patterns not captured by raw metadata.",
+
+  solution:
+    "Extracted MFCC features and spectrogram representations. Built CNN-based classifiers and experimented with transfer learning to improve multi-class genre prediction performance..",
+
+  stack: ["Python,", "TensorFlow,", "Keras,", "Librosa,", "OpenCV"],
+  githubLink:
+    "https://github.com/maik122/Elevvo.git"
+},
+{
+  id: 37,
+  type: "AI & ML",
+  subType: "Computer Vision & Deep Learning",
+  title: "Traffic Sign Recognition",
+
+  problem:
+    "Autonomous systems require reliable visual classification under varying environmental conditions.",
+
+  solution:
+    "Trained convolutional neural networks on augmented traffic sign datasets. Compared custom architectures with MobileNet-based transfer learning to improve generalisation accuracy.",
+
+  stack: ["Python,", "TensorFlow,", "Keras,", "OpenCV"],   
+  githubLink:
+    "https://github.com/maik122/Elevvo.git"
+},
   // ================= Data Science =================
 
   {
@@ -95,15 +142,15 @@ export const projectsData: Project[] = [
     title: "Netflix Movies & TV Shows EDA",
 
     problem:
-      "Large streaming datasets contain hidden trends in content production, ratings, and regional distribution that are difficult to interpret without structured analysis.",
+      "Large content libraries obscure strategic production and distribution trends.",
 
     solution:
-      "Performed exploratory data analysis on 8,800+ Netflix titles. Cleaned the dataset, analysed genre and regional patterns, and created visualisations to uncover trends in content strategy.",
+      "Performed structured exploratory analysis on 8,800+ titles. Cleaned and transformed data, identified genre distribution patterns, and visualised regional and temporal production trends to extract actionable insights.",
 
     stack: ["Python,", "Pandas,", "Matplotlib,", "Seaborn,"],
 
     githubLink:
-      "https://github.com/maik122/Edulumos/tree/main/NetflixEDA"
+      "https://github.com/maik122/EDULUMOS-INTERSHIP-TASKS.git"
   },
 
   {
@@ -113,16 +160,82 @@ export const projectsData: Project[] = [
     title: "Customer Segmentation — Mall Customers",
 
     problem:
-      "Retail businesses struggle to personalise marketing strategies without clear customer segmentation.",
+      "Generic marketing reduces targeting efficiency.",
 
     solution:
-      "Applied K-Means and DBSCAN clustering algorithms to segment mall customers based on purchasing behaviour. Visualised clusters to support targeted marketing strategies.",
+      "Applied K-Means and DBSCAN clustering after feature scaling to segment customers by income and spending behaviour. Analysed cluster profiles to support targeted campaign strategies.",
 
     stack: ["Python,", "Scikit-learn,", "Pandas,", "Matplotlib,", "Seaborn,"],
 
     githubLink:
-      "https://github.com/maik122/Elevvo/tree/main/CustomerSegmentation"
+      "https://github.com/maik122/Elevvo.git"
   },
+{
+  id: 31,
+  type: "Data Science",
+  subType: "Machine Learning & Predictive Modelling",
+  title: "Student Score Prediction",
+
+  problem:
+    "Educational outcomes are influenced by multiple behavioural variables.",
+
+  solution:
+    "Performed data cleaning and exploratory analysis, then implemented linear and polynomial regression models to predict exam scores. Evaluated model accuracy and visualised predictions to understand performance patterns.",
+
+  stack: ["Python,", "Pandas,", "Scikit-learn,", "Matplotlib"],
+  githubLink:
+    "https://github.com/maik122/Elevvo.git"
+},
+{
+  id: 32,
+  type: "Data Science",
+  subType: "Machine Learning & Predictive Modelling",
+  title: "Forest Cover Type Classification",
+
+  problem:
+    "Accurately classifying forest cover types using environmental and cartographic features is essential for ecological management.",
+
+  solution:
+    "Trained and compared Random Forest and XGBoost models for multi-class classification. Evaluated performance using classification metrics and visualised feature importance.",
+
+  stack: ["Python,", "Scikit-learn,", "XGBoost,", "Pandas,", "Matplotlib"],
+
+  githubLink:
+    "https://github.com/maik122/Elevvo.git"
+},
+{
+  id: 33,
+  type: "Data Science",
+  subType: "Machine Learning & Predictive Modelling",
+  title: "Loan Approval Prediction",
+
+  problem:
+    "Financial institutions need reliable models to predict loan approval outcomes while managing risk.",
+
+  solution:
+    "Handled missing values, encoded categorical features, and addressed class imbalance. Evaluated models using precision, recall, and F1-score to ensure reliability.",
+
+  stack: ["Python,", "Pandas,", "Scikit-learn,", "Matplotlib"],
+  githubLink:
+    "https://github.com/maik122/Elevvo.git" 
+},
+
+{
+  id: 36,
+  type: "Data Science",
+  subType: "Time Series Forecasting",
+  title: "Sales Forecasting",
+
+  problem:
+    "Businesses require accurate sales forecasts to optimise inventory and strategic planning.",
+
+  solution:
+    "Created time-based features and applied regression models to predict future sales. Explored rolling averages and XGBoost for improved time-aware forecasting.",
+
+  stack: ["Python,", "Pandas,", "XGBoost,", "Matplotlib,", "Seaborn"],
+  githubLink:
+    "https://github.com/maik122/Elevvo.git"
+},
 
   // ================= Software =================
 
@@ -148,7 +261,7 @@ export const projectsData: Project[] = [
     id: 16,
     type: "Software",
     subType: "Software Development",
-    title: "UK Railway System",
+    title: "UK Railway ticketing System",
 
     problem:
       "Train booking systems require structured scheduling, seat management, and user/admin interfaces for efficient operation.",
@@ -184,7 +297,7 @@ export const projectsData: Project[] = [
     id: 18,
     type: "Software",
     subType: "Web Development",
-    title: "Personal Portfolio Website",
+    title: "Developer Portfolio Website",
 
     problem:
       "Developers need a structured platform to present projects, skills, and contact information professionally.",
@@ -195,7 +308,7 @@ export const projectsData: Project[] = [
     stack: ["React,", "TypeScript,", "Tailwind CSS,", "Vite"],
 
     githubLink:
-      "https://github.com/maik122/Personal-Portfolio-Website"
+      "https://github.com/MK-Web-Solutions/MaikCV.git"
   },
 
   {
@@ -211,7 +324,9 @@ export const projectsData: Project[] = [
       "Developed a full-stack React and Node.js application allowing content management, portfolio display, and client communication features.",
 
     stack: ["React,", "TypeScript,", "Tailwind CSS,", "Vite"],
-  },
+    githubLink:
+      "https://github.com/MK-Web-Solutions/Reole.git"
+  },  
 
   {
     id: 20,
@@ -242,6 +357,8 @@ export const projectsData: Project[] = [
     solution:
       "Designed and built a standalone custom MIDI controller using a microcontroller and custom hardware inputs for studio and live performance integration.",
 
-    stack: ["Microcontroller,", "C ++,", "MIDI Protocol,", "Hardware Prototyping,"]
+    stack: ["Microcontroller,", "C ++,", "MIDI Protocol,", "Hardware Prototyping,"],
+    githubLink:
+      "https://gitlab.uwe.ac.uk/m2-kassem/dissertation.git"
   }
 ];

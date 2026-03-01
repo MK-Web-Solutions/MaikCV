@@ -182,6 +182,7 @@ const SelectedWorks = () => {
     target="_blank"
     rel="noreferrer"
     className="inline-block mt-2 text-white underline hover:text-gray-300"
+    style={{color: "#E4E0E0",marginTop: "20px",marginBottom: "10px"}}
   >
     View Project on GitHub →
   </a>
