@@ -80,13 +80,13 @@ const Footer = () => {
 
   {/* Contact Section */}
   <div className="flex flex-col sm:flex-row items-center gap-4 mb-4 text-gray-800">
-    <a href="mailto:youremail@example.com" className="hover:text-blue-500">youremail@example.com</a>
+    <a href="mailto:mai_mohsen02@hotmail.com" className="hover:text-blue-500">mai_mohsen02@hotmail.com</a>
     <span>|</span>
-    <a href="tel:+441234567890" className="hover:text-blue-500">+44 123 456 7890</a>
+    <a href="tel:+447709865298" className="hover:text-blue-500">+44 7709 865298</a>
     <span>|</span>
-    <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="hover:text-blue-500">GitHub</a>
+    <a href="https://github.com/maik122" target="_blank" rel="noreferrer" className="hover:text-blue-500">GitHub</a>
     <span>|</span>
-    <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="hover:text-blue-500">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/mai-k-30b040192/" target="_blank" rel="noreferrer" className="hover:text-blue-500">LinkedIn</a>
   </div>
 
   <p>@ 2026 MK Web-Solutions. All rights reserved.</p>
