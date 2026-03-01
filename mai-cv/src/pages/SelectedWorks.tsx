@@ -105,19 +105,19 @@ const SelectedWorks = () => {
             exit={{ opacity: 0 }}
             style={{ color: "white" }}
           >
-            <motion.div
-              ref={modalRef}
-              className="bg-[#2C2F33] rounded-[20px] overflow-hidden shadow-2xl flex flex-col"
-              style={{
-                position: "fixed",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                width: "clamp(300px, 60vw, 900px)",
-                maxHeight: "90vh",
-                color: "white",
-              }}
-            >
+<motion.div
+  ref={modalRef}
+  className="bg-[#2C2F33] rounded-[20px] shadow-2xl flex flex-col p-8"
+  style={{
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "clamp(320px, 65vw, 950px)",
+    maxHeight: "85vh",
+  }}
+>
+  <div className=" flex-1 overflow-y-auto">
               {/*
               {currentProject.images && currentProject.images.length > 0 && (
                 <div className="w-full overflow-hidden relative">
@@ -129,20 +129,54 @@ const SelectedWorks = () => {
                   <p className="text-sm mt-1 text-center">{currentProject.images[0].caption}</p>
                 </div>
               )} */}
-              <div className="p-6 flex-1 overflow-auto">
-                <h2 className="text-3xl font-bold mb-2">{currentProject.title}</h2>
-                <p className="mb-2">{currentProject.summary}</p>
-                {currentProject.details && <p>{currentProject.details}</p>}
-                {currentProject.githubLink && (
-                  <a
-                    href={currentProject.githubLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:underline mt-4 block"
-                  >
-                    View Project on GitHub
-                  </a>
-                )}
+<h2 className="text-3xl font-bold mb-6 text-center">  
+  {currentProject.title}
+</h2>
+
+{/* Problem */}
+<div className="mb-6">
+  <h3 className="text-lg font-semibold mb-2 text-gray-300">Problem</h3>
+  <p className="text-gray-200 leading-relaxed">
+    {currentProject.problem}
+  </p>
+</div>
+
+{/* Solution */}
+<div className="mb-6">
+  <h3 className="text-lg font-semibold mb-2 text-gray-300">Solution</h3>
+  <p className="text-gray-200 leading-relaxed">
+    {currentProject.solution}
+  </p>
+</div>
+
+
+
+{/* Tech Stack */}
+<div className="mb-6">
+  <h3 className="text-lg font-semibold mb-3 text-gray-300">Tech Stack</h3>
+<div className="flex flex-wrap gap-3 mt-2">
+  {currentProject.stack.map((tech, i) => (
+    <span
+      key={i}
+      className="px-3 py-1 bg-gray-700 rounded-full text-sm text-white"
+    >
+      {tech}
+    </span>
+  ))}
+</div>
+</div>
+
+{/* GitHub Link */}
+{currentProject.githubLink && (
+  <a
+    href={currentProject.githubLink}
+    target="_blank"
+    rel="noreferrer"
+    className="inline-block mt-2 text-white underline hover:text-gray-300"
+  >
+    View Project on GitHub →
+  </a>
+)}
               </div>
             </motion.div>
           </motion.div>

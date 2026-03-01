@@ -13,9 +13,9 @@ const timelineData = [
     logo: omnichunkLogo,
     details: [
       "Volunteer / Part-time",
-      "Designed evaluation framework to benchmark large language models",
-      "Automated repeatable testing using Python, saving ~20 hours/week",
-      "Analysed outputs and produced reports for model selection"
+      "Designed an evaluation framework to benchmark two large language models across a structured test case",
+      "Automated repeatable testing using Python, reducing manual evaluation time",
+      "Analysed outputs and produced reports to support model selection & scaling decisions"
     ]
   },
   {
@@ -24,7 +24,7 @@ const timelineData = [
     logo: mkWebLogo,
     details: [
       "Freelance",
-      "Developed dynamic websites and web apps using HTML, CSS, JS, Python (Flask/Django)",
+      "Developed dynamic websites and web apps using React, Vite, and Tailwind CSS",
       "Built end-to-end solutions including frontend, backend, and database integration",
       "Delivered client-specific projects with responsive design and performance optimisation"
     ]
@@ -35,7 +35,7 @@ const timelineData = [
     title: "Data Scientist — EduLumos",
     logo: eduLumosLogo,
     details: [
-      "Internship",
+      "Project-Based Internship",
       "Performed data analysis, visualisation, and ML workflows",
       "Explored real-world datasets, trained models, and produced insights"
     ]
@@ -45,7 +45,7 @@ const timelineData = [
     title: "Machine Learning Engineer — Elevvo",
     logo: elevvoLogo,
     details: [
-      "Internship",
+      "Project-Based Internship",
       "Worked on 10+ end-to-end ML projects: regression, clustering, classification, recommendations",
       "Gained experience in time series and audio classification tasks"
     ]
