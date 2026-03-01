@@ -71,7 +71,7 @@ const SelectedWorks = () => {
       className={`px-6 py-2 rounded-full font-medium
         ${activeTab === tab
           ? "bg-white text-black"
-          : "bg-[#E4E0E0] text-gray-300"} 
+          : "bg-[#E4E0E0] text-black hover:bg-[#C0BEBE]"} 
       `}
     >
       {tab}
