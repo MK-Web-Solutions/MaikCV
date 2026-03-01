@@ -58,32 +58,51 @@ const HomePage: React.FC = () => {
   return (
     <PageWrapper>
       <div className="w-full relative">
+{/* Hero Section */}
+<section className="w-full bg-[#E4E0E0] flex flex-col lg:flex-row items-center justify-center min-h-[80vh] lg:min-h-[90vh] p-6">
 
-        {/* Hero Section */}
-        <section className="w-full h-screen flex bg-[#E4E0E0]">
-          <div className="w-1/2 h-full flex items-center justify-center">
-            <img
-              src="/wave.gif"
-              alt="Waving animation"
-              className="w-[80%] h-auto lg:w-[90%] object-contain animate-float"
-            />
-          </div>
-          <div className="w-1/2 h-full flex items-center justify-center">
-            <h1 className="text-white text-[90px] md:text-[110px] lg:text-[140px] xl:text-[160px] font-bold leading-[1.1] text-left">
-              Hi, I am <span className="text-blue-500">Mai</span>!
-            </h1>
-          </div>
-        </section>
+  {/* GIF Side */}
+  <div className="w-full lg:w-3/5 flex items-center justify-center">
+    <img
+      src="/wave.gif"
+      alt="Waving animation"
+      className="w-[90%] max-w-[800px] h-auto object-contain animate-float"
+    />
+  </div>
 
-        {/* Biography Section */}
-        <section className="relative w-full bg-[#E4E0E0] py-14 flex flex-col items-center">
-          <h2 className="font-semibold text-[60px] leading-[73px] capitalize text-black mb-8">About Me</h2>
-          <p className="font-normal text-[34px] leading-[140%] text-[#565656] max-w-[1150px] text-center mb-12">
-            I’m a computer science graduate fascinated by AI and machine learning. I love turning data into insights and building projects that solve real problems, from predicting football matches to creating recommendation systems. Always exploring new tech and pushing my skills further.
-          </p>
+  {/* Text Side */}
+  <div className="w-full lg:w-2/5 flex flex-col items-center lg:items-start justify-center mt-6 lg:mt-0">
+    <h1
+      className="text-white font-extrabold leading-tight text-center lg:text-left mb-6"
+      style={{
+        fontSize: "clamp(3rem, 8vw, 10rem)"
+      }}
+    >
+      Hi, I am <span className="text-blue-500">Mai</span>!
+    </h1>
 
-          {/* Experience Section */}
-<section id="experience" className="w-full py-20 bg-gray-50 flex flex-col items-center">
+    {/* Biography */}
+    <p className="font-normal text-[28px] md:text-[34px] leading-[140%] text-[#565656] max-w-[650px] text-center lg:text-left">
+      I’m a computer science graduate fascinated by AI and machine learning. I love turning data into insights and building projects that solve real problems, from predicting football matches to creating recommendation systems. Always exploring new tech and pushing my skills further.
+    </p>
+  </div>
+{/* Line Under Hero */}
+<div className="w-full flex justify-center mt-6 pb-[20px] pt-[20px]">
+  <div className="w-1/2 border-t-2 border-gray-400 "></div>
+</div>
+</section>
+
+
+
+{/* Experience Section */}
+<section id="experience" className="w-full py-16 bg-[#E4E0E0] flex flex-col items-center">
+  {/* Section Title */}
+  <h2 className="text-4xl md:text-5xl font-bold text-[#3C3D37] mb-12"
+        style={{
+        fontSize: "clamp(3rem, 8vw, 10rem)"
+      }}
+    >Experience</h2>
+
   <div className="timeline relative w-full max-w-[1000px]">
 
     {/* Vertical Line */}
@@ -97,18 +116,16 @@ const HomePage: React.FC = () => {
           key={idx}
           className={`timeline-item relative w-1/2 px-6 mb-12 ${isOdd ? 'left-0 text-right' : 'left-1/2 text-left'}`}
         >
-
-
           {/* Card */}
           <div className="timeline-content bg-white p-6 rounded-lg shadow-md max-w-[400px] inline-block relative z-20 hover:translate-y-[-3px] transition-transform">
             <div className="timeline-date font-bold text-[#3C3D37] mb-2">{item.date}</div>
-                <img
-                    src={item.logo}
-                    alt={`${item.title} logo`}
-                    className="w-20 h-20 object-contain mb-2 flex-shrink-0"
-                    style={{ width: "48px", height: "48px" }}
-                  />     
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+            <img
+              src={item.logo}
+              alt={`${item.title} logo`}
+              className="w-20 h-20 object-contain mb-2 flex-shrink-0"
+              style={{ width: "48px", height: "48px" }}
+            />     
+            <h3 className="text-xl font-bold mb-2">{item.title}</h3>
             <ul className="list-disc list-inside text-gray-700">
               {item.details.map((d, i) => <li key={i}>{d}</li>)}
             </ul>
@@ -116,10 +133,16 @@ const HomePage: React.FC = () => {
         </div>
       )
     })}
-
   </div>
+        <h1 className="text-center font-extrabold text-4xl mb-8"
+            style={{
+        fontSize: "clamp(3rem, 8vw, 10rem)"
+      }}
+    >Projects</h1>
+    
+    
+    
 </section>
-        </section>
 
 
         <SelectedWorks />

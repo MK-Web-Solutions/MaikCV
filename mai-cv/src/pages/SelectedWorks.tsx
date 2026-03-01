@@ -58,21 +58,30 @@ const SelectedWorks = () => {
 
   return (
     <div className="bg-[#1D2124] flex flex-col gap-12 py-16" style={{ color: "white" }}>
-      <h1 className="text-center font-extrabold text-4xl mb-8">Projects</h1>
+
 {/* Tabs */}
 <div className="flex justify-center gap-4 mb-12">
   {tabs.map((tab) => (
-    <button
+    <motion.button
       key={tab}
       onClick={() => setActiveTab(tab)}
-      className={`px-6 py-2 rounded-full transition-colors duration-200 font-medium
+      whileHover={{ scale: 1.05 }}          // Grow a bit on hover
+      whileTap={{ scale: 0.95 }}            // Shrink slightly when clicked
+      transition={{ type: "spring", stiffness: 300 }}
+      className={`px-6 py-2 rounded-full font-medium
         ${activeTab === tab
-          ? "bg-white text-black"       // Active tab is highlighted clearly
-          : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white"} // Inactive tabs subtle
+          ? "bg-white text-black"
+          : "bg-[#E4E0E0] text-gray-300"} 
       `}
     >
       {tab}
-    </button>
+      {/* Optional: animated underline */}
+      <motion.div
+        layoutId="underline"
+        className={`h-[2px] bg-black mt-1 rounded`}
+        style={{ opacity: activeTab === tab ? 1 : 0 }}
+      />
+    </motion.button>
   ))}
 </div>
       {/* Projects grouped by subType */}

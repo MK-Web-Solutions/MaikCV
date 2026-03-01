@@ -69,7 +69,11 @@ const Footer = () => {
 
       {/* Skills Section */}
       <section className="w-full max-w-6xl px-4 mb-16">
-        <h2 className="text-3xl font-bold text-center mb-8">Skills & Tools</h2>
+        <h2 className="text-3xl font-bold text-center mb-8"
+              style={{
+        fontSize: "clamp(3rem, 8vw, 10rem)"
+      }}
+    >Skills & Tools</h2>
         {renderCategory("Languages", skillsData.languages)}
         {renderCategory("Frameworks / Libraries", skillsData.frameworks)}
         {renderCategory("Tools & Methodologies", skillsData.tools)}
