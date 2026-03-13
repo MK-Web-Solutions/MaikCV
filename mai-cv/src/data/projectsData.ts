@@ -28,7 +28,7 @@ export const projectsData: Project[] = [
     solution:
       "Built an end-to-end prediction pipeline using 4 seasons of Premier League data (1,520 matches). Engineered features including rolling form averages, win/loss streaks, and bookmaker-implied probabilities. Trained and tuned a Random Forest classifier achieving 66% accuracy, Deployed as an interactive web app where users can select any fixture and receive a prediction with plain-English reasoning explaining the key factors behind it.",
 
-    stack: ["Python,", "Pandas,", "Scikit-learn,", "TensorFlow,", "Matplotlib", "Streamlit","Rest API"],
+    stack: ["Python,", "Pandas,", "Scikit-learn,", "TensorFlow,", "Matplotlib,", "Streamlit,","Rest API"],
 
     githubLink:
       "https://predicting-premier-league-match-outcomes.streamlit.app",
