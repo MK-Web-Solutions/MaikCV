@@ -7,8 +7,8 @@ import {
 import {
   faBrain, faNetworkWired, faRobot, faLayerGroup, faCommentDots,
   faChartLine, faDatabase, faTasks, faCogs, faProjectDiagram,
-  faBookOpen, faChartPie, faCode, faCodeBranch, faServer, faDesktop,
-  faLaptopCode, faSitemap, faUsersCog, faClock, faLightbulb,
+  faBookOpen, faChartPie, faCode, faCodeBranch, faServer,
+  faLaptopCode, faSitemap, faUsersCog,
   faPlug, faWind, faStream  // ← added faWind and faStream
 } from '@fortawesome/free-solid-svg-icons';
 const skillsData = {
