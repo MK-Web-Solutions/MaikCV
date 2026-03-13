@@ -1,14 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {
-  faPython, faTelegramPlane, faHtml5, faCss3, faJs
+  faPython, faHtml5, faCss3, faJs, faReact  // ← added faReact
 } from '@fortawesome/free-brands-svg-icons';
+
 import {
   faBrain, faNetworkWired, faRobot, faLayerGroup, faCommentDots,
   faChartLine, faDatabase, faTasks, faCogs, faProjectDiagram,
   faBookOpen, faChartPie, faCode, faCodeBranch, faServer, faDesktop,
-  faLaptopCode, faSitemap, faUsersCog, faClock, faLightbulb
+  faLaptopCode, faSitemap, faUsersCog, faClock, faLightbulb,
+  faPlug, faWind, faStream  // ← added faWind and faStream
 } from '@fortawesome/free-solid-svg-icons';
-
 const skillsData = {
   languages: [
     { icon: faPython, name: "Python" },
@@ -20,20 +22,22 @@ const skillsData = {
   ],
   frameworks: [
     { icon: faServer, name: "Flask / FastAPI" },
-    { icon: faTelegramPlane, name: "TensorFlow" },
     { icon: faCogs, name: "NumPy" },
     { icon: faProjectDiagram, name: "Scikit-learn" },
     { icon: faBookOpen, name: "Jupyter Notebooks" },
     { icon: faChartPie, name: "Matplotlib / Seaborn" },
     { icon: faLaptopCode, name: "Full-Stack Development" },
+    { icon: faReact, name: "React" },          // from fab (brands)
+    { icon: faWind, name: "Tailwind CSS" },    // from fas
+    { icon: faStream, name: "Streamlit" },     // from fas
+    { icon: faBrain, name: "TensorFlow" },     // reusing brain icon
   ],
   tools: [
     { icon: faCodeBranch, name: "Git / Version Control" },
-    { icon: faDesktop, name: "Tkinter" },
     { icon: faSitemap, name: "UML & Software Design" },
     { icon: faUsersCog, name: "Agile Methodologies" },
-    { icon: faClock, name: "Time Management" },
-    { icon: faLightbulb, name: "Problem Solving" },
+    { icon: faDatabase, name: "SQLAlchemy" },
+    { icon: faPlug, name: "REST API Integration" },
   ],
   ai: [
     { icon: faBrain, name: "Machine Learning" },
@@ -42,6 +46,7 @@ const skillsData = {
     { icon: faLayerGroup, name: "Neural Networks" },
     { icon: faCommentDots, name: "Natural Language Processing" },
     { icon: faChartLine, name: "Data Visualization" },
+    { icon: faTasks, name: "Feature Engineering" },
     { icon: faTasks, name: "Data Manipulation (Pandas)" },
   ],
 };

@@ -63,6 +63,7 @@ const HomePage: React.FC = () => {
 
   {/* GIF Side */}
   <div className="w-full lg:w-3/5 flex items-center justify-center">
+  <br />
 <img
   src="/wave.gif"
   alt="Waving animation"
@@ -83,8 +84,8 @@ const HomePage: React.FC = () => {
 
     {/* Biography */}
     <p className="font-normal text-[28px] md:text-[34px] leading-[140%] text-[#565656] max-w-[650px] text-center lg:text-left">
-      I’m a computer science graduate fascinated by AI and machine learning. I love turning data into insights and building projects that solve real problems, from predicting football matches to creating recommendation systems. Always exploring new tech and pushing my skills further.
-    </p>
+Computer Science graduate specialising in AI and machine learning. I build end-to-end data projects , from collecting and cleaning real-world data to training models and deploying production-ready applications,
+I'm actively looking for roles in machine learning or data science where I can keep building things that matter.    </p>
   </div>
 {/* Line Under Hero */}
 <div className="w-full flex justify-center mt-6 pb-[20px] pt-[20px]">
