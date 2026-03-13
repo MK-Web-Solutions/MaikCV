@@ -21,7 +21,7 @@
       autoprefixer: {},
     },
   }
-# Common
+# Common Design Elements
 - Backgrounds:
   - Light: #E4E0E0
   - Dark: #1D1B20 / #1D2124
@@ -33,4 +33,4 @@
 - [ ] work on the projects page, add carouselimages make it more visually appealing, links to live projects, demo 
 - [ ] push projects data to github and link it to the projects page
 - [] add certifications & education 
-
+- [] 
