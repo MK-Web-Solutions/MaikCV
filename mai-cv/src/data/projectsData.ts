@@ -21,6 +21,7 @@ export const projectsData: Project[] = [
     type: "AI & ML",
     subType: "Machine Learning & Predictive Modelling",
     title: "Premier League Match Outcome Predictor",
+    imgSrc: "/projects/premier-league.png",
 
     problem:
       "Predicting football match outcomes is difficult , results depend on form, momentum, opponent strength, and market expectations, all of which change week to week.",
@@ -32,7 +33,6 @@ export const projectsData: Project[] = [
 
     githubLink:
       "https://predicting-premier-league-match-outcomes.streamlit.app",
-    imgSrc: "/projects/premier-league.png"
   },
 
   {
@@ -76,6 +76,7 @@ export const projectsData: Project[] = [
     type: "AI & ML",
     subType: "Natural Language Processing & AI Applications",
     title: "Job Keyword Matcher",
+    imgSrc: "/projects/CVMatcher.png",
 
     problem:
       "Applicants struggle to quantify CV alignment with job specifications.",
@@ -86,7 +87,8 @@ export const projectsData: Project[] = [
     stack: ["Python,", "spaCy,", "Scikit-learn,", "TF-IDF,", "Streamlit"],
 
     githubLink:
-      "https://github.com/maik122/"
+      "https://github.com/maik122/",
+    
   },
   {
   id: 34,
@@ -109,6 +111,7 @@ export const projectsData: Project[] = [
   type: "AI & ML",
   subType: "Computer Vision & Deep Learning",
   title: "Music Genre Classification",
+  imgSrc: "/projects/genre-ai.png",
 
   problem:
     "Audio signals contain complex frequency patterns not captured by raw metadata.",
@@ -118,7 +121,7 @@ export const projectsData: Project[] = [
 
   stack: ["Python,", "TensorFlow,", "Keras,", "Librosa,", "OpenCV"],
   githubLink:
-    "https://github.com/maik122/Elevvo.git"
+    "https://github.com/maik122/MusicGenreClassifier.git",
 },
 {
   id: 37,
@@ -247,6 +250,7 @@ export const projectsData: Project[] = [
     type: "Software",
     subType: "Web Development",
     title: "Football Player Transfer Value Website",
+    imgSrc: "/projects/TransferValueComparison.png",
 
     problem:
       "Estimating football player market value requires combining statistical analysis with an accessible interface for users.",
@@ -257,7 +261,7 @@ export const projectsData: Project[] = [
     stack: ["Python,", "Flask,", "SQLite,", "HTML,", "CSS,"],
 
     githubLink:
-      "https://github.com/maik122/football-player-transfer-value"
+      "https://github.com/maik122/football-player-transfer-value",
   },
 
   {
@@ -265,6 +269,7 @@ export const projectsData: Project[] = [
     type: "Software",
     subType: "Software Development",
     title: "UK Railway ticketing System",
+    imgSrc: "/projects/systemHomePage.png",
 
     problem:
       "Train booking systems require structured scheduling, seat management, and user/admin interfaces for efficient operation.",
@@ -275,7 +280,7 @@ export const projectsData: Project[] = [
     stack: ["Python,", "Tkinter"],
 
     githubLink:
-      "https://github.com/maik122/UK-railway-system"
+      "https://github.com/maik122/UK-railway-system",
   },
 
   {
@@ -283,6 +288,7 @@ export const projectsData: Project[] = [
     type: "Software",
     subType: "Web Development",
     title: "Hotel Booking Website",
+    imgSrc: "/projects/HotelHomepage.png",
 
     problem:
       "Hotels require a streamlined system to manage bookings, users, and administrative operations.",
@@ -290,7 +296,7 @@ export const projectsData: Project[] = [
     solution:
       "Developed a full-stack Flask application with SQLAlchemy for database management, enabling user authentication, booking management, and admin dashboards.",
 
-    stack: ["Python,", "Flask,", "SQLAlchemy,", "HTML,", "CSS,"],
+    stack: ["Python,", "Flask,", "SQLAlchemy,", "HTML,", "CSS"],
 
     githubLink:
       "https://github.com/maik122/Hotel-booking-website"
@@ -301,6 +307,7 @@ export const projectsData: Project[] = [
     type: "Software",
     subType: "Web Development",
     title: "Developer Portfolio Website",
+    imgSrc: "/projects/DeveloperWebsite.png",
 
     problem:
       "Developers need a structured platform to present projects, skills, and contact information professionally.",
@@ -311,7 +318,7 @@ export const projectsData: Project[] = [
     stack: ["React,", "TypeScript,", "Tailwind CSS,", "Vite"],
 
     githubLink:
-      "https://github.com/MK-Web-Solutions/MaikCV.git"
+      "https://maikassem.vercel.app"
   },
 
   {
@@ -319,6 +326,7 @@ export const projectsData: Project[] = [
     type: "Software",
     subType: "Web Development",
     title: "Artist Showreel Website",
+    imgSrc: "/projects/ArtistWebsite.png",
 
     problem:
       "Artists require a digital platform to showcase their work and connect with potential clients.",
@@ -328,7 +336,7 @@ export const projectsData: Project[] = [
 
     stack: ["React,", "TypeScript,", "Tailwind CSS,", "Vite"],
     githubLink:
-      "https://github.com/MK-Web-Solutions/Reole.git"
+      "https://reole.vercel.app"
   },  
 
   {
@@ -336,6 +344,7 @@ export const projectsData: Project[] = [
     type: "Software",
     subType: "Software Development",
     title: "MIDI Composition Tool",
+    imgSrc: "/projects/MIDICompositionTool.png",
 
     problem:
       "Composers often struggle with generating harmonically consistent chord progressions quickly within DAWs.",
@@ -353,6 +362,7 @@ export const projectsData: Project[] = [
     type: "Embedded Systems",
     subType: "Music Tech / Hardware",
     title: "Custom MIDI Controller",
+    imgSrc: "/projects/MIDIController.png",
 
     problem:
       "Off-the-shelf MIDI controllers often lack custom workflow features required for specific composition and performance needs.",

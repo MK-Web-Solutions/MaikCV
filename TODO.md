@@ -30,4 +30,6 @@
 
 
 ## To Do
-- [ ] trnasform html to this
+- [ ] work on the projects page, add images make it more visually appealing, links to live projects, demo 
+- [ ] push projects data to github and link it to the projects page
+
