@@ -7,8 +7,10 @@ export interface Project {
   problem: string;
   solution: string;
   stack: string[];
+  imgSrc?: string;
 
   githubLink?: string;
+  link?: string;
 }
 export const projectsData: Project[] = [
 
@@ -29,7 +31,8 @@ export const projectsData: Project[] = [
     stack: ["Python,", "Pandas,", "Scikit-learn,", "TensorFlow,", "Matplotlib"],
 
     githubLink:
-      "https://github.com/maik122/Predicting-Premier-League-Match-Outcomes.git"
+      "https://predicting-premier-league-match-outcomes.streamlit.app",
+    imgSrc: "/projects/premier-league.png"
   },
 
   {

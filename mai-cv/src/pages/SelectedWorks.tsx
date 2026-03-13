@@ -10,9 +10,15 @@ const ProjectCard = ({ project, onOpen }: { project: Project; onOpen: () => void
       className="min-w-[220px] w-[220px] h-[300px] rounded-[20px] overflow-hidden p-4 flex flex-col justify-between cursor-pointer transition duration-200 hover:bg-[#3C3D37] hover:-translate-y-1"
       onClick={onOpen}
     >
-      <div className="w-full h-[180px] overflow-hidden rounded-[15px]">
-        {/* <img src={thumbnail} alt={project.title} className="w-full h-full object-cover" /> */}
-      </div>
+<div className="w-full h-full object-cover transition duration-300 hover:scale-105">
+  {project.imgSrc && (
+    <img
+      src={project.imgSrc}
+      alt={project.title}
+      className="w-full h-full object-cover"
+    />
+  )}
+</div>
       <div className="mt-4 flex flex-col items-center text-center">
         <h3 className="font-bold text-base leading-tight line-clamp-2">{project.title}</h3>
       </div>
@@ -138,6 +144,15 @@ const SelectedWorks = () => {
                   <p className="text-sm mt-1 text-center">{currentProject.images[0].caption}</p>
                 </div>
               )} */}
+              {currentProject.imgSrc && (
+  <div className="w-full mb-6 overflow-hidden rounded-xl">
+    <img
+      src={currentProject.imgSrc}
+      alt={currentProject.title}
+      className="w-full h-[320px] object-cover"
+    />
+  </div>
+)}
 <h2 className="text-3xl font-bold mb-6 text-center">  
   {currentProject.title}
 </h2>
@@ -184,7 +199,7 @@ const SelectedWorks = () => {
     className="inline-block mt-2 text-white underline hover:text-gray-300"
     style={{color: "#E4E0E0",marginTop: "20px",marginBottom: "10px"}}
   >
-    View Project on GitHub →
+    View Project  →
   </a>
 )}
               </div>
