@@ -10,12 +10,12 @@ const ProjectCard = ({ project, onOpen }: { project: Project; onOpen: () => void
       className="min-w-[220px] w-[220px] h-[300px] rounded-[20px] overflow-hidden p-4 flex flex-col justify-between cursor-pointer transition duration-200 hover:bg-[#3C3D37] hover:-translate-y-1"
       onClick={onOpen}
     >
-<div className="w-full h-full object-cover transition duration-300 hover:scale-105">
+<div className="w-full h-[140px] overflow-hidden rounded-xl">
   {project.imgSrc && (
     <img
       src={project.imgSrc}
       alt={project.title}
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover transition duration-300 hover:scale-105"
     />
   )}
 </div>
@@ -149,7 +149,7 @@ const SelectedWorks = () => {
     <img
       src={currentProject.imgSrc}
       alt={currentProject.title}
-      className="w-full h-[320px] object-cover"
+      className="w-full h-[400px] object-cover"
     />
   </div>
 )}
