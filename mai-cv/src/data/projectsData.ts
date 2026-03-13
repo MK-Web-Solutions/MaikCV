@@ -26,7 +26,7 @@ export const projectsData: Project[] = [
       "Predicting football match outcomes is difficult , results depend on form, momentum, opponent strength, and market expectations, all of which change week to week.",
 
     solution:
-      "Built an end-to-end prediction pipeline using 4 seasons of Premier League data (1,520 matches). Engineered features including rolling form averages, win/loss streaks, and bookmaker-implied probabilities. Trained and tuned a Random Forest classifier achieving 66% accuracy — competitive with professional betting models. Deployed as an interactive web app where users can select any fixture and receive a prediction with plain-English reasoning explaining the key factors behind it.",
+      "Built an end-to-end prediction pipeline using 4 seasons of Premier League data (1,520 matches). Engineered features including rolling form averages, win/loss streaks, and bookmaker-implied probabilities. Trained and tuned a Random Forest classifier achieving 66% accuracy, Deployed as an interactive web app where users can select any fixture and receive a prediction with plain-English reasoning explaining the key factors behind it.",
 
     stack: ["Python,", "Pandas,", "Scikit-learn,", "TensorFlow,", "Matplotlib", "Streamlit","Rest API"],
 
