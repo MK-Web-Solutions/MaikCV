@@ -31,7 +31,7 @@ const SelectedWorks = () => {
   const [activeTab, setActiveTab] = useState("AI & ML");
   const modalRef = useRef<HTMLDivElement>(null);
 
-  const tabs = ["AI & ML", "Data Science", "Software", "Embedded Systems"];
+  const tabs = ["AI & ML", "Data Analysis", "Software", "Embedded Systems"];
   const currentProject = projectsData.find((p: Project) => p.title === openCard);
 
   useEffect(() => {

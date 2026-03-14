@@ -1,7 +1,7 @@
 export interface Project {
   id: number;
   title: string;
-  type: "AI & ML" | "Data Science" | "Software" | "Embedded Systems";
+  type: "AI & ML" | "Data Analysis" | "Software" | "Embedded Systems";
   subType?: string;
 
   problem: string;
@@ -24,10 +24,10 @@ export const projectsData: Project[] = [
     imgSrc: "/projects/premier-league.png",
 
     problem:
-      "Predicting football match outcomes is difficult , results depend on form, momentum, opponent strength, and market expectations, all of which change week to week.",
+      "Football match outcomes are shaped by a complex interplay of team form, momentum, opponent strength, and market expectations — all of which shift week to week, making reliable prediction inherently difficult.",
 
     solution:
-      "Built an end-to-end prediction pipeline using 4 seasons of Premier League data (1,520 matches). Engineered features including rolling form averages, win/loss streaks, and bookmaker-implied probabilities. Trained and tuned a Random Forest classifier achieving 66% accuracy, Deployed as an interactive web app where users can select any fixture and receive a prediction with plain-English reasoning explaining the key factors behind it.",
+      "Built an end-to-end prediction pipeline trained on four seasons of Premier League data (1,520 matches). Engineered features including rolling form averages, win/loss streaks, and bookmaker-implied probabilities. Trained and optimised a Random Forest classifier achieving 66% accuracy, then deployed it as an interactive Streamlit web app where users can select any fixture and receive a prediction with plain-English reasoning explaining the key contributing factors.",
 
     stack: ["Python,", "Pandas,", "Scikit-learn,", "TensorFlow,", "Matplotlib,", "Streamlit,","Rest API"],
 
@@ -42,10 +42,10 @@ export const projectsData: Project[] = [
     title: "Engine Anomaly Detection & RUL Prediction",
 
     problem:
-      "Reactive maintenance increases operational cost and failure risk in industrial systems.",
+      "In industrial systems, degradation often goes undetected until a critical threshold is reached — making reactive maintenance strategies costly and operationally risky.",
 
     solution:
-      "Designed a GRU-based recurrent neural network to model degradation patterns in  engine time-series data. Implemented sequence modelling and early anomaly detection to estimate remaining useful life prior to failure thresholds.",
+      "Designed a GRU-based recurrent neural network to model temporal degradation patterns in engine sensor time-series data. Implemented sequence modelling and early anomaly detection to estimate remaining useful life prior to failure thresholds, enabling proactive maintenance scheduling.",
 
     stack: ["Python,", "TensorFlow,", "GRU,", "Pandas,", "NumPy"],
 
@@ -60,10 +60,10 @@ export const projectsData: Project[] = [
     title: "Traffic Violation Detection (In Progress)",
 
     problem:
-      "Manual CCTV monitoring is inconsistent and does not scale.",
+      "Manual CCTV monitoring is inconsistent, labour-intensive, and fails to scale effectively for real-time enforcement across large traffic networks.",
 
     solution:
-      "Building a real-time object detection pipeline using YOLOv8 and OpenCV. The system identifies vehicles and rule violations directly from video streams, optimised for inference speed and detection accuracy.",
+      "Building a real-time object detection pipeline using YOLOv8 and OpenCV to identify vehicles and traffic rule violations directly from live video streams, optimised for inference speed and detection accuracy under varying environmental conditions.",
 
     stack: ["Python,", "YOLOv8,", "OpenCV,", "PyTorch,"],
 
@@ -79,10 +79,10 @@ export const projectsData: Project[] = [
     imgSrc: "/projects/CVMatcher.png",
 
     problem:
-      "Applicants struggle to quantify CV alignment with job specifications.",
+      "Applicants often struggle to objectively assess how well their CV aligns with a job specification, leading to unfocused applications and missed opportunities.",
 
     solution:
-      "Developed an NLP pipeline using TF-IDF and semantic similarity scoring to rank CV-job relevance. Deployed via Streamlit for interactive comparison and automated skill-gap highlighting.",
+      "Developed an NLP pipeline using TF-IDF vectorisation and semantic similarity scoring to rank CV-to-job-description relevance. Deployed as an interactive Streamlit web app with automated skill-gap highlighting to provide actionable feedback.",
 
     stack: ["Python,", "spaCy,", "Scikit-learn,", "TF-IDF,", "Streamlit"],
 
@@ -98,14 +98,14 @@ export const projectsData: Project[] = [
   imgSrc: "/projects/MovieRecommendation.png",
 
   problem:
-    "Users face content overload without personalised filtering.",
+    "Users face content overload on streaming platforms, where the absence of meaningful personalisation makes discovering relevant titles time-consuming and frustrating.",
 
   solution:
-    "Implemented collaborative filtering with similarity scoring and matrix factorisation. Generated ranked recommendations using user-item interaction matrices and cosine similarity optimisation.",
+    "Implemented a collaborative filtering system using matrix factorisation and cosine similarity scoring over user-item interaction matrices. Generated ranked, personalised recommendations that improve in relevance as interaction history grows.",
 
   stack: ["Python,", "Pandas,", "NumPy,", "Scikit-learn,", "Matplotlib"],
   githubLink:
-    "https://github.com/maik122/Elevvo.git"
+    "https://recommendamovie.streamlit.app/"
 },
 {
   id: 35,
@@ -115,10 +115,10 @@ export const projectsData: Project[] = [
   imgSrc: "/projects/genre-ai.png",
 
   problem:
-    "Audio signals contain complex frequency patterns not captured by raw metadata.",
+    "Audio signals contain rich, complex frequency patterns that raw metadata alone cannot capture, making automated genre classification a non-trivial deep learning challenge.",
 
   solution:
-    "Extracted MFCC features and spectrogram representations. Built CNN-based classifiers and experimented with transfer learning to improve multi-class genre prediction performance..",
+    "Extracted MFCC features and spectrogram representations from audio samples. Developed CNN-based classifiers and applied transfer learning techniques to improve multi-class genre prediction performance across diverse audio inputs.",
 
   stack: ["Python,", "TensorFlow,", "Keras,", "Librosa,", "OpenCV"],
   githubLink:
@@ -131,28 +131,45 @@ export const projectsData: Project[] = [
   title: "Traffic Sign Recognition",
 
   problem:
-    "Autonomous systems require reliable visual classification under varying environmental conditions.",
+    "Autonomous driving systems require robust, reliable visual classification of traffic signs under varying lighting, occlusion, and real-world environmental conditions.",
 
   solution:
-    "Trained convolutional neural networks on augmented traffic sign datasets. Compared custom architectures with MobileNet-based transfer learning to improve generalisation accuracy.",
+    "Trained convolutional neural networks on augmented traffic sign datasets, benchmarking custom CNN architectures against MobileNet-based transfer learning to evaluate generalisation accuracy and inference performance.",
 
   stack: ["Python,", "TensorFlow,", "Keras,", "OpenCV"],   
   githubLink:
     "https://github.com/maik122/Elevvo.git"
+  
 },
-  // ================= Data Science =================
+{
+  id: 33,
+  type: "AI & ML",
+  subType: "Machine Learning & Predictive Modelling",
+  title: "Loan Approval Prediction",
+
+  problem:
+    "Financial institutions need accurate, interpretable models to assess loan approval outcomes consistently while managing default risk across diverse applicant profiles.",
+
+  solution:
+    "Preprocessed applicant data by handling missing values, encoding categorical features, and addressing class imbalance. Trained and evaluated classification models using precision, recall, and F1-score to ensure reliable, balanced performance across approval outcomes.",
+
+  stack: ["Python,", "Pandas,", "Scikit-learn,", "Matplotlib"],
+  githubLink:
+    "https://github.com/maik122/Elevvo.git" 
+},
+  // ================= Data Analysis =================
 
   {
     id: 5,
-    type: "Data Science",
-    subType: "Data Analysis & Exploratory Projects",
-    title: "Netflix Movies & TV Shows EDA",
+    type: "Data Analysis",
+    subType: "Exploratory Data Analysis",
+    title: "Netflix Movies & TV Shows ",
 
     problem:
-      "Large content libraries obscure strategic production and distribution trends.",
+      "Large content libraries obscure underlying trends in production strategy, genre investment, and regional distribution — making data-driven insights difficult to surface without structured analysis.",
 
     solution:
-      "Performed structured exploratory analysis on 8,800+ titles. Cleaned and transformed data, identified genre distribution patterns, and visualised regional and temporal production trends to extract actionable insights.",
+      "Performed structured exploratory data analysis on 8,800+ titles. Cleaned and transformed raw catalogue data, identified genre distribution patterns, and visualised regional and temporal production trends to extract actionable strategic insights.",
 
     stack: ["Python,", "Pandas,", "Matplotlib,", "Seaborn,"],
 
@@ -162,15 +179,15 @@ export const projectsData: Project[] = [
 
   {
     id: 6,
-    type: "Data Science",
-    subType: "Machine Learning & Predictive Modelling",
+    type: "Data Analysis",
+    subType: "Classification & Clustering",
     title: "Customer Segmentation — Mall Customers",
 
     problem:
-      "Generic marketing reduces targeting efficiency.",
+      "Generic, untargeted marketing campaigns reduce conversion efficiency by failing to account for the distinct spending behaviours and needs of different customer groups.",
 
     solution:
-      "Applied K-Means and DBSCAN clustering after feature scaling to segment customers by income and spending behaviour. Analysed cluster profiles to support targeted campaign strategies.",
+      "Applied K-Means and DBSCAN clustering algorithms after feature scaling to segment customers by income and spending behaviour. Analysed cluster profiles to generate targeted campaign recommendations tailored to each distinct customer segment.",
 
     stack: ["Python,", "Scikit-learn,", "Pandas,", "Matplotlib,", "Seaborn,"],
 
@@ -179,15 +196,15 @@ export const projectsData: Project[] = [
   },
 {
   id: 31,
-  type: "Data Science",
-  subType: "Machine Learning & Predictive Modelling",
+  type: "Data Analysis",
+  subType: "Prediction & Forecasting",
   title: "Student Score Prediction",
 
   problem:
-    "Educational outcomes are influenced by multiple behavioural variables.",
+    "Academic performance is influenced by a range of behavioural and demographic variables, making it difficult to identify at-risk students without a structured predictive framework.",
 
   solution:
-    "Performed data cleaning and exploratory analysis, then implemented linear and polynomial regression models to predict exam scores. Evaluated model accuracy and visualised predictions to understand performance patterns.",
+    "Performed data cleaning and exploratory analysis before implementing linear and polynomial regression models to predict exam scores. Evaluated model accuracy and visualised prediction trends to surface key behavioural drivers of student performance.",
 
   stack: ["Python,", "Pandas,", "Scikit-learn,", "Matplotlib"],
   githubLink:
@@ -195,49 +212,33 @@ export const projectsData: Project[] = [
 },
 {
   id: 32,
-  type: "Data Science",
-  subType: "Machine Learning & Predictive Modelling",
+  type: "Data Analysis",
+  subType: "Classification & Clustering",
   title: "Forest Cover Type Classification",
 
   problem:
-    "Accurately classifying forest cover types using environmental and cartographic features is essential for ecological management.",
+    "Accurately classifying forest cover types from environmental and cartographic features is essential for ecological resource management and land-use planning.",
 
   solution:
-    "Trained and compared Random Forest and XGBoost models for multi-class classification. Evaluated performance using classification metrics and visualised feature importance.",
+    "Trained and compared Random Forest and XGBoost models for multi-class forest cover classification. Evaluated performance using comprehensive classification metrics and visualised feature importance to interpret model behaviour.",
 
   stack: ["Python,", "Scikit-learn,", "XGBoost,", "Pandas,", "Matplotlib"],
 
   githubLink:
     "https://github.com/maik122/Elevvo.git"
 },
-{
-  id: 33,
-  type: "Data Science",
-  subType: "Machine Learning & Predictive Modelling",
-  title: "Loan Approval Prediction",
-
-  problem:
-    "Financial institutions need reliable models to predict loan approval outcomes while managing risk.",
-
-  solution:
-    "Handled missing values, encoded categorical features, and addressed class imbalance. Evaluated models using precision, recall, and F1-score to ensure reliability.",
-
-  stack: ["Python,", "Pandas,", "Scikit-learn,", "Matplotlib"],
-  githubLink:
-    "https://github.com/maik122/Elevvo.git" 
-},
 
 {
   id: 36,
-  type: "Data Science",
-  subType: "Time Series Forecasting",
+  type: "Data Analysis",
+  subType: "Prediction & Forecasting",
   title: "Sales Forecasting",
 
   problem:
-    "Businesses require accurate sales forecasts to optimise inventory and strategic planning.",
+    "Without accurate sales forecasts, businesses struggle to optimise inventory, allocate resources effectively, and make informed strategic planning decisions.",
 
   solution:
-    "Created time-based features and applied regression models to predict future sales. Explored rolling averages and XGBoost for improved time-aware forecasting.",
+    "Engineered time-based features and applied regression models to forecast future sales volumes. Explored rolling average smoothing and XGBoost-based approaches to improve time-aware prediction accuracy.",
 
   stack: ["Python,", "Pandas,", "XGBoost,", "Matplotlib,", "Seaborn"],
   githubLink:
@@ -254,10 +255,10 @@ export const projectsData: Project[] = [
     imgSrc: "/projects/TransferValueComparison.png",
 
     problem:
-      "Estimating football player market value requires combining statistical analysis with an accessible interface for users.",
+      "Estimating a football player's market value requires combining statistical performance data with an accessible interface — a balance rarely achieved in publicly available tools.",
 
     solution:
-      "Developed a Flask-based web application with SQLite database integration, user authentication, dashboards, and predictive valuation features.",
+      "Developed a Flask-based web application with SQLite database integration, user authentication, performance dashboards, and a predictive valuation feature for estimating player transfer market value.",
 
     stack: ["Python,", "Flask,", "SQLite,", "HTML,", "CSS,"],
 
@@ -273,10 +274,10 @@ export const projectsData: Project[] = [
     imgSrc: "/projects/systemHomePage.png",
 
     problem:
-      "Train booking systems require structured scheduling, seat management, and user/admin interfaces for efficient operation.",
+      "Railway booking systems must handle complex scheduling logic, seat availability management, and distinct user and administrator workflows within a single, cohesive application.",
 
     solution:
-      "Built a desktop-based railway booking system using Tkinter, featuring user ticket booking, schedule management, and administrative controls.",
+      "Built a desktop-based railway booking system using Tkinter, featuring end-user ticket booking, live schedule management, and a dedicated administrative control panel for staff operations.",
 
     stack: ["Python,", "Tkinter"],
 
@@ -292,10 +293,10 @@ export const projectsData: Project[] = [
     imgSrc: "/projects/HotelHomepage.png",
 
     problem:
-      "Hotels require a streamlined system to manage bookings, users, and administrative operations.",
+      "Hotels require a reliable system to manage room availability, guest bookings, and administrative operations through a unified and intuitive platform.",
 
     solution:
-      "Developed a full-stack Flask application with SQLAlchemy for database management, enabling user authentication, booking management, and admin dashboards.",
+      "Developed a full-stack Flask application with SQLAlchemy ORM for database management, supporting user authentication, booking workflows, and a comprehensive admin dashboard for operational oversight.",
 
     stack: ["Python,", "Flask,", "SQLAlchemy,", "HTML,", "CSS"],
 
@@ -311,10 +312,10 @@ export const projectsData: Project[] = [
     imgSrc: "/projects/DeveloperWebsite.png",
 
     problem:
-      "Developers need a structured platform to present projects, skills, and contact information professionally.",
+      "Developers need a polished, structured platform to present their projects, technical skills, and experience professionally to potential employers and collaborators.",
 
     solution:
-      "Built a responsive React-based portfolio website showcasing projects, experience, and technical skills with modern UI design.",
+      "Designed and built a fully responsive React portfolio website showcasing projects, work experience, and technical skills with a modern, performance-optimised UI.",
 
     stack: ["React,", "TypeScript,", "Tailwind CSS,", "Vite"],
 
@@ -330,10 +331,10 @@ export const projectsData: Project[] = [
     imgSrc: "/projects/ArtistWebsite.png",
 
     problem:
-      "Artists require a digital platform to showcase their work and connect with potential clients.",
+      "Artists require a professional digital platform to showcase their creative work and facilitate direct communication with potential clients and collaborators.",
 
     solution:
-      "Developed a full-stack React and Node.js application allowing content management, portfolio display, and client communication features.",
+      "Developed a full-stack React and Node.js web application featuring dynamic portfolio display, content management capabilities, and integrated client communication tools.",
 
     stack: ["React,", "TypeScript,", "Tailwind CSS,", "Vite"],
     githubLink:
@@ -348,10 +349,10 @@ export const projectsData: Project[] = [
     imgSrc: "/projects/MIDICompositionTool.png",
 
     problem:
-      "Composers often struggle with generating harmonically consistent chord progressions quickly within DAWs.",
+      "Composers working within DAW environments often lack efficient tools for generating harmonically consistent chord progressions on demand, disrupting creative flow.",
 
     solution:
-      "Created a MIDI chord-generation tool for Logic Pro using the Scripter plugin, enabling fast, key-consistent chord creation directly inside the DAW workflow.",
+      "Created a MIDI chord-generation tool for Logic Pro using the Scripter plugin framework, enabling rapid, key-consistent chord creation directly within the DAW and eliminating the need to context-switch during composition.",
 
     stack: ["JavaScript,", "Logic Pro Scripter,", "MIDI,"]
   },
@@ -366,10 +367,10 @@ export const projectsData: Project[] = [
     imgSrc: "/projects/MIDIController.png",
 
     problem:
-      "Off-the-shelf MIDI controllers often lack custom workflow features required for specific composition and performance needs.",
+      "Off-the-shelf MIDI controllers rarely accommodate the bespoke workflow requirements of specific composition and live performance setups, limiting creative flexibility.",
 
     solution:
-      "Designed and built a standalone custom MIDI controller using a microcontroller and custom hardware inputs for studio and live performance integration.",
+      "Designed and built a standalone custom MIDI controller from the ground up using a microcontroller and purpose-built hardware inputs, fully integrated for both studio recording and live performance environments.",
 
     stack: ["Microcontroller,", "C ++,", "MIDI Protocol,", "Hardware Prototyping,"],
     githubLink:
