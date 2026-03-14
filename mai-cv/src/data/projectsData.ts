@@ -87,7 +87,7 @@ export const projectsData: Project[] = [
     stack: ["Python,", "spaCy,", "Scikit-learn,", "TF-IDF,", "Streamlit"],
 
     githubLink:
-      "https://github.com/maik122/",
+      "https://jobkeywordchecker.streamlit.app/",
     
   },
   {
@@ -95,6 +95,7 @@ export const projectsData: Project[] = [
   type: "AI & ML",
   subType: "Recommendation Systems",
   title: "Movie Recommendation System",
+  imgSrc: "/projects/MovieRecommendation.png",
 
   problem:
     "Users face content overload without personalised filtering.",
