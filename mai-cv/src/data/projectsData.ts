@@ -146,6 +146,7 @@ export const projectsData: Project[] = [
   type: "AI & ML",
   subType: "Machine Learning & Predictive Modelling",
   title: "Loan Approval Prediction",
+  imgSrc: "/projects/LoanIQ.png",
 
   problem:
     "Financial institutions need accurate, interpretable models to assess loan approval outcomes consistently while managing default risk across diverse applicant profiles.",
@@ -155,7 +156,7 @@ export const projectsData: Project[] = [
 
   stack: ["Python,", "Pandas,", "Scikit-learn,", "Matplotlib"],
   githubLink:
-    "https://github.com/maik122/Elevvo.git" 
+    "https://loanintelligence.streamlit.app" 
 },
   // ================= Data Analysis =================
 
@@ -164,6 +165,7 @@ export const projectsData: Project[] = [
     type: "Data Analysis",
     subType: "Exploratory Data Analysis",
     title: "Netflix Movies & TV Shows ",
+    imgSrc: "/projects/NetflixEDA.png",
 
     problem:
       "Large content libraries obscure underlying trends in production strategy, genre investment, and regional distribution — making data-driven insights difficult to surface without structured analysis.",
@@ -174,7 +176,7 @@ export const projectsData: Project[] = [
     stack: ["Python,", "Pandas,", "Matplotlib,", "Seaborn,"],
 
     githubLink:
-      "https://github.com/maik122/EDULUMOS-INTERSHIP-TASKS.git"
+      "https://netlixeda.streamlit.app"
   },
 
   {
@@ -182,6 +184,7 @@ export const projectsData: Project[] = [
     type: "Data Analysis",
     subType: "Classification & Clustering",
     title: "Customer Segmentation — Mall Customers",
+    imgSrc: "/projects/CustomerSegmentation.png",
 
     problem:
       "Generic, untargeted marketing campaigns reduce conversion efficiency by failing to account for the distinct spending behaviours and needs of different customer groups.",
@@ -192,7 +195,7 @@ export const projectsData: Project[] = [
     stack: ["Python,", "Scikit-learn,", "Pandas,", "Matplotlib,", "Seaborn,"],
 
     githubLink:
-      "https://github.com/maik122/Elevvo.git"
+      "https://customersanalysis.streamlit.app"
   },
 {
   id: 31,
@@ -215,6 +218,7 @@ export const projectsData: Project[] = [
   type: "Data Analysis",
   subType: "Classification & Clustering",
   title: "Forest Cover Type Classification",
+  imgSrc: "/projects/ForestCoverType.png",
 
   problem:
     "Accurately classifying forest cover types from environmental and cartographic features is essential for ecological resource management and land-use planning.",
@@ -225,7 +229,7 @@ export const projectsData: Project[] = [
   stack: ["Python,", "Scikit-learn,", "XGBoost,", "Pandas,", "Matplotlib"],
 
   githubLink:
-    "https://github.com/maik122/Elevvo.git"
+    "https://github.com/maik122/ForestCoverType.git"
 },
 
 {
@@ -247,43 +251,7 @@ export const projectsData: Project[] = [
 
   // ================= Software =================
 
-  {
-    id: 15,
-    type: "Software",
-    subType: "Web Development",
-    title: "Football Player Transfer Value Website",
-    imgSrc: "/projects/TransferValueComparison.png",
 
-    problem:
-      "Estimating a football player's market value requires combining statistical performance data with an accessible interface — a balance rarely achieved in publicly available tools.",
-
-    solution:
-      "Developed a Flask-based web application with SQLite database integration, user authentication, performance dashboards, and a predictive valuation feature for estimating player transfer market value.",
-
-    stack: ["Python,", "Flask,", "SQLite,", "HTML,", "CSS,"],
-
-    githubLink:
-      "https://github.com/maik122/football-player-transfer-value",
-  },
-
-  {
-    id: 16,
-    type: "Software",
-    subType: "Software Development",
-    title: "UK Railway ticketing System",
-    imgSrc: "/projects/systemHomePage.png",
-
-    problem:
-      "Railway booking systems must handle complex scheduling logic, seat availability management, and distinct user and administrator workflows within a single, cohesive application.",
-
-    solution:
-      "Built a desktop-based railway booking system using Tkinter, featuring end-user ticket booking, live schedule management, and a dedicated administrative control panel for staff operations.",
-
-    stack: ["Python,", "Tkinter"],
-
-    githubLink:
-      "https://github.com/maik122/UK-railway-system",
-  },
 
   {
     id: 17,
@@ -356,7 +324,43 @@ export const projectsData: Project[] = [
 
     stack: ["JavaScript,", "Logic Pro Scripter,", "MIDI,"]
   },
+  {
+    id: 15,
+    type: "Software",
+    subType: "Web Development",
+    title: "Football Player Transfer Value Website",
+    imgSrc: "/projects/TransferValueComparison.png",
 
+    problem:
+      "Estimating a football player's market value requires combining statistical performance data with an accessible interface — a balance rarely achieved in publicly available tools.",
+
+    solution:
+      "Developed a Flask-based web application with SQLite database integration, user authentication, performance dashboards, and a predictive valuation feature for estimating player transfer market value.",
+
+    stack: ["Python,", "Flask,", "SQLite,", "HTML,", "CSS,"],
+
+    githubLink:
+      "https://github.com/maik122/football-player-transfer-value",
+  },
+
+  {
+    id: 16,
+    type: "Software",
+    subType: "Software Development",
+    title: "UK Railway ticketing System",
+    imgSrc: "/projects/systemHomePage.png",
+
+    problem:
+      "Railway booking systems must handle complex scheduling logic, seat availability management, and distinct user and administrator workflows within a single, cohesive application.",
+
+    solution:
+      "Built a desktop-based railway booking system using Tkinter, featuring end-user ticket booking, live schedule management, and a dedicated administrative control panel for staff operations.",
+
+    stack: ["Python,", "Tkinter"],
+
+    githubLink:
+      "https://github.com/maik122/UK-railway-system",
+  },
   // ================= Embedded Systems =================
 
   {
