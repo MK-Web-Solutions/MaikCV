@@ -28,7 +28,7 @@ export const skillsList: Skill[] = [
   // Software Dev
   { name: "C++", category: "Software Dev" },
   { name: "Flask / FastAPI", category: "Software Dev" },
-  { name: "SQLAlchemy", category: "Software Dev" },
+  //{ name: "SQLAlchemy", category: "Software Dev" },
   { name: "Git & Version Control", category: "Software Dev" },
   { name: "Agile Methodologies", category: "Software Dev" },
   { name: "UML & Software Design", category: "Software Dev" },
@@ -38,5 +38,6 @@ export const skillsList: Skill[] = [
   { name: "Full-Stack Development", category: "Web Dev" },
   { name: "HTML / CSS / JavaScript", category: "Web Dev" },
   { name: "React", category: "Web Dev" },
-  { name: "Tailwind CSS", category: "Web Dev" },
+
+  //{ name: "Tailwind CSS", category: "Web Dev" },
 ];

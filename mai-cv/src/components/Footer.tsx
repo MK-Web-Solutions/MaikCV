@@ -28,7 +28,7 @@ const skillsData = {
     { icon: faChartPie, name: "Matplotlib / Seaborn" },
     { icon: faLaptopCode, name: "Full-Stack Development" },
     { icon: faReact, name: "React" },          // from fab (brands)
-    { icon: faWind, name: "Tailwind CSS" },    // from fas
+    //{ icon: faWind, name: "Tailwind CSS" },    // from fas
     { icon: faStream, name: "Streamlit" },     // from fas
     { icon: faBrain, name: "TensorFlow" },     // reusing brain icon
   ],
@@ -36,7 +36,7 @@ const skillsData = {
     { icon: faCodeBranch, name: "Git / Version Control" },
     { icon: faSitemap, name: "UML & Software Design" },
     { icon: faUsersCog, name: "Agile Methodologies" },
-    { icon: faDatabase, name: "SQLAlchemy" },
+    //{ icon: faDatabase, name: "SQLAlchemy" },
     { icon: faPlug, name: "REST API Integration" },
   ],
   ai: [
@@ -47,7 +47,7 @@ const skillsData = {
     { icon: faCommentDots, name: "Natural Language Processing" },
     { icon: faChartLine, name: "Data Visualization" },
     { icon: faTasks, name: "Feature Engineering" },
-    { icon: faTasks, name: "Data Manipulation (Pandas)" },
+    { icon: faTasks, name: "Data Manipulation " },
   ],
 };
 
