@@ -34,7 +34,7 @@ export const projectsData: Project[] = [
     githubLink:
       "https://predicting-premier-league-match-outcomes.streamlit.app",
   },
-
+/*
   {
     id: 2,
     type: "AI & ML",
@@ -70,7 +70,7 @@ export const projectsData: Project[] = [
     githubLink:
       "https://github.com/maik122/"
   },
-
+*/
   {
     id: 4,
     type: "AI & ML",
@@ -202,6 +202,7 @@ export const projectsData: Project[] = [
   type: "Data Analysis",
   subType: "Prediction & Forecasting",
   title: "Student Score Prediction",
+  imgSrc: "/projects/StudentScore.png",
 
   problem:
     "Academic performance is influenced by a range of behavioural and demographic variables, making it difficult to identify at-risk students without a structured predictive framework.",
@@ -211,7 +212,7 @@ export const projectsData: Project[] = [
 
   stack: ["Python,", "Pandas,", "Scikit-learn,", "Matplotlib"],
   githubLink:
-    "https://github.com/maik122/Elevvo.git"
+    "https://predictstudentscore.streamlit.app"
 },
 {
   id: 32,
@@ -231,7 +232,7 @@ export const projectsData: Project[] = [
   githubLink:
     "https://github.com/maik122/ForestCoverType.git"
 },
-
+/*
 {
   id: 36,
   type: "Data Analysis",
@@ -248,7 +249,7 @@ export const projectsData: Project[] = [
   githubLink:
     "https://github.com/maik122/Elevvo.git"
 },
-
+*/
   // ================= Software =================
 
 
@@ -324,6 +325,7 @@ export const projectsData: Project[] = [
 
     stack: ["JavaScript,", "Logic Pro Scripter,", "MIDI,"]
   },
+  /*
   {
     id: 15,
     type: "Software",
@@ -342,7 +344,7 @@ export const projectsData: Project[] = [
     githubLink:
       "https://github.com/maik122/football-player-transfer-value",
   },
-
+*/
   {
     id: 16,
     type: "Software",
