@@ -9,7 +9,7 @@ import {
   faChartLine, faDatabase, faTasks, faCogs, faProjectDiagram,
   faBookOpen, faChartPie, faCode, faCodeBranch, faServer,
   faLaptopCode, faSitemap, faUsersCog,
-  faPlug, faWind, faStream  // ← added faWind and faStream
+  faPlug, faStream  // ← added faWind and faStream
 } from '@fortawesome/free-solid-svg-icons';
 const skillsData = {
   languages: [
