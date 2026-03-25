@@ -71,6 +71,7 @@ export const projectsData: Project[] = [
       "https://github.com/maik122/"
   },
 */
+/*
   {
     id: 4,
     type: "AI & ML",
@@ -90,6 +91,7 @@ export const projectsData: Project[] = [
       "https://jobkeywordchecker.streamlit.app/",
     
   },
+  */
   {
   id: 34,
   type: "AI & ML",
@@ -124,6 +126,7 @@ export const projectsData: Project[] = [
   githubLink:
     "https://github.com/maik122/MusicGenreClassifier.git",
 },
+/*
 {
   id: 37,
   type: "AI & ML",
@@ -141,6 +144,7 @@ export const projectsData: Project[] = [
     "https://github.com/maik122/Elevvo.git"
   
 },
+*/
 {
   id: 33,
   type: "AI & ML",
