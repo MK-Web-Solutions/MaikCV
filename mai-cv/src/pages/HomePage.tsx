@@ -3,19 +3,19 @@ import PageWrapper from '../components/PageWrapper';
 
 import mkWebLogo from '/images/MKWebSolutions.jpg';
 import omnichunkLogo from '/images/Omnichunk_Logo.png';
-import eduLumosLogo from '/images/EduLumous_Logo.jpeg';
+// import eduLumosLogo from '/images/EduLumous_Logo.jpeg';
 import elevvoLogo from '/images/elevvopaths_logo.jpeg';
 
 const timelineData = [
-  {
+{
     date: "Dec 2025 - Present",
     title: "AI Model Evaluation Engineer — Omnichunk",
     logo: omnichunkLogo,
     details: [
-      "Volunteer / Part-time",
-      "Designed an evaluation framework to benchmark two large language models across a structured test case",
-      "Automated repeatable testing using Python, reducing manual evaluation time",
-      "Analysed outputs and produced reports to support model selection & scaling decisions"
+      "Part-time",
+      "Accelerated model selection decisions by designing an evaluation framework that benchmarked  LLMs across a structured test suite",
+      "Reduced manual evaluation time significantly by automating repeatable testing workflows using Python",
+      "Enabled data-driven scaling decisions by analysing model outputs and producing structured comparison reports"
     ]
   },
   {
@@ -24,30 +24,20 @@ const timelineData = [
     logo: mkWebLogo,
     details: [
       "Freelance",
-      "Developed dynamic websites and web apps using React, Vite, and Tailwind CSS",
-      "Built end-to-end solutions including frontend, backend, and database integration",
-      "Delivered client-specific projects with responsive design and performance optimisation"
-    ]
-  },
-
-  {
-    date: "Oct 2025 - Nov 2025",
-    title: "Data Scientist — EduLumos",
-    logo: eduLumosLogo,
-    details: [
-      "Project-Based Internship",
-      "Performed data analysis, visualisation, and ML workflows",
-      "Explored real-world datasets, trained models, and produced insights"
+      "Delivered responsive, production-ready web applications for clients by building end-to-end solutions using React, Vite, and Tailwind CSS",
+      "Improved application reliability and performance by integrating frontend, backend, and database layers into cohesive full-stack architectures",
+      "Increased client satisfaction by translating bespoke requirements into optimised, scalable web products"
     ]
   },
   {
-    date: "Aug 2025 - Sep 2025",
+    date: "Aug 2025 - Oct 2025",
     title: "Machine Learning Engineer — Elevvo",
     logo: elevvoLogo,
     details: [
       "Project-Based Internship",
-      "Worked on 10+ end-to-end ML projects: regression, clustering, classification, recommendations",
-      "Gained experience in time series and audio classification tasks"
+      "Built production-ready ML models across 6 domains — regression, classification, clustering, recommendation, time-series, and audio classification — by completing end-to-end projects from raw data to evaluated output",
+      "Improved model accuracy and generalisation by applying feature engineering and systematic hyperparameter tuning across each project",
+      "Demonstrated full ML pipeline ownership by independently managing data ingestion, preprocessing, training, and evaluation with no supervision"
     ]
   }
 ];
