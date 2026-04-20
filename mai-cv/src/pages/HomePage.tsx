@@ -5,15 +5,36 @@ import mkWebLogo from '/images/MKWebSolutions.jpg';
 import omnichunkLogo from '/images/Omnichunk_Logo.png';
 // import eduLumosLogo from '/images/EduLumous_Logo.jpeg';
 import elevvoLogo from '/images/elevvopaths_logo.jpeg';
-
+import upchieveLogo from '/images/Upchieve_Logo.png';
+import sparksBristolLogo from '/images/SparksBristol_Logo.png';
+import bristolairport from '/images/BristolAirport_Logo.png';
 const timelineData = [
-{
-    date: "Dec 2025 - Present",
+  {
+    date: "Apr 2026 - Present",
+    title: "Computer Science Tutor — UPchieve",
+    logo: upchieveLogo, // add import if you have a logo
+    details: [
+      //"Volunteer",
+      "Provide one-on-one tutoring in AP Computer Science A, breaking down complex programming concepts for students at varying skill levels"
+    ]
+  },
+  {
+    date: "Apr 2026 - Present",
+    title: "Electronics Repair Technician — Sparks Bristol",
+    logo: sparksBristolLogo, // add import if you have a logo
+    details: [
+      //"Volunteer",
+      "Diagnosed and repaired consumer electronic devices across a community repair initiative, reducing e-waste",
+      "Communicated technical issues clearly to non-technical users"
+    ]
+  },
+  {
+    date: "Dec 2025 - Apr 2026",
     title: "AI Model Evaluation Engineer — Omnichunk",
     logo: omnichunkLogo,
     details: [
-      "Part-time",
-      "Accelerated model selection decisions by designing an evaluation framework that benchmarked  LLMs across a structured test suite",
+      //"Part-time",
+      "Accelerated model selection decisions by designing an evaluation framework that benchmarked LLMs across a structured test suite",
       "Reduced manual evaluation time significantly by automating repeatable testing workflows using Python",
       "Enabled data-driven scaling decisions by analysing model outputs and producing structured comparison reports"
     ]
@@ -23,10 +44,10 @@ const timelineData = [
     title: "Full-Stack Web Developer — MK Web-Solutions",
     logo: mkWebLogo,
     details: [
-      "Freelance",
-      "Delivered responsive, production-ready web applications for clients by building end-to-end solutions using React, Vite, and Tailwind CSS",
-      "Improved application reliability and performance by integrating frontend, backend, and database layers into cohesive full-stack architectures",
-      "Increased client satisfaction by translating bespoke requirements into optimised, scalable web products"
+      //"Freelance",
+      "Built responsive websites for clients using React, Vite, and Tailwind CSS",
+      "Translated client requirements into functional UI and component-based design systems",
+      "Delivered deployed websites focused on usability and performance"
     ]
   },
   {
@@ -34,10 +55,16 @@ const timelineData = [
     title: "Machine Learning Engineer — Elevvo",
     logo: elevvoLogo,
     details: [
-      "Project-Based Internship",
-      "Built production-ready ML models across 6 domains — regression, classification, clustering, recommendation, time-series, and audio classification — by completing end-to-end projects from raw data to evaluated output",
-      "Improved model accuracy and generalisation by applying feature engineering and systematic hyperparameter tuning across each project",
-      "Demonstrated full ML pipeline ownership by independently managing data ingestion, preprocessing, training, and evaluation with no supervision"
+      //"Project-Based Internship",
+      "Independently designed and evaluated end-to-end ML models across six domains — regression, classification, clustering, recommendation, time series, and audio classification — taking each from raw data ingestion through to scored output"
+    ]
+  },
+  {
+    date: "Jun 2022 - Nov 2022",
+    title: "Airport Hostess — Bristol Airport",
+    logo: bristolairport, // or a logo if you have one
+    details: [
+      "Managed high passenger volumes in a fast-paced, customer-facing environment, resolving time-sensitive issues with composure and clear communication"
     ]
   }
 ];
