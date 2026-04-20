@@ -34,9 +34,7 @@ const timelineData = [
     logo: omnichunkLogo,
     details: [
       //"Part-time",
-      "Accelerated model selection decisions by designing an evaluation framework that benchmarked LLMs across a structured test suite",
-      "Reduced manual evaluation time significantly by automating repeatable testing workflows using Python",
-      "Enabled data-driven scaling decisions by analysing model outputs and producing structured comparison reports"
+      "Automated LLM evaluation by building a Python benchmarking pipeline, reducing manual review and enabling faster, consistent model comparison across prompts and datasets.",
     ]
   },
   {
